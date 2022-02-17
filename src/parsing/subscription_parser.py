@@ -57,7 +57,6 @@ class SubscriptionParser:
             Subscription.SUBREDDITS: [],
             Subscription.NSFW: False,
             Subscription.EMAIL: False,
-            Subscription.VALID: True,
             Subscription.SCHEMA_VERSION: Subscription.CURRENT_SCHEMA_VERSION
         }
         self.tokens = SubscriptionLexer(sub).tokenize()

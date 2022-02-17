@@ -52,7 +52,7 @@ class AlertBot:
                 else:
                     Logger.log('--------- Bot paused by developer ---------')
 
-                SleepHandler.sleep(900)
+                SleepHandler.sleep(600)
                 AlertBot.clear()
             except KeyboardInterrupt:
                 Logger.log('Keyboard Interrupt - Bot killed')

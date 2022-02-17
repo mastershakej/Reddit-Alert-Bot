@@ -12,7 +12,6 @@ class Subscription:
     SUBREDDITS = 'subreddits'
     NSFW = 'nsfw'
     EMAIL = 'email'
-    VALID = 'valid'  # TODO: Remove "VALID" from everywhere
     SCHEMA_VERSION = 'schema_version'
 
     CURRENT_SCHEMA_VERSION = 1
