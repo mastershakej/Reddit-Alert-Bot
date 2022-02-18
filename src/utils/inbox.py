@@ -37,6 +37,9 @@ def compose_subscribe_message(username, new_sub, subs, subreddit_not_specified):
         'To unsubscribe, send me a message with the body "unsubscribe #" (without quotes) where "#" is the ' + \
         'actual subscription number.\t \nAlternatively, you can reply to this message or any replies from ' + \
         'the bot in regards to this subscription and reply with "unsubscribe" as the body.\t \n' + \
+        'To edit this subscription, send me a message with the body "edit #" (without quotes) where "#" is the ' + \
+        'actual subscription number.\t \nAlternatively, you can reply to this message or any replies from ' + \
+        'the bot in regards to this subscription with "edit" and the new subscription criteria as the body.\t \n' + \
         (DEFAULT_SUB_MESSAGE if subreddit_not_specified else '') + \
         new_sub.to_table('New Subscription') + '\t \n\t \n' + \
         format_subscription_list(subs, 'Your Subscriptions') + \
@@ -186,7 +189,8 @@ def compose_match_message(sub, submission, subs):
         format_submission_body_summary(submission) + '\t \n\t \n' + \
         sub.to_table('Matched Subscription') + '\t \n\t \n' + \
         'Reply to the bot with "subs" or "subscriptions" to view your subscriptions. Reply with "unsub", ' + \
-        '"unsubscribe", or "stop" to remove this subscription.' + \
+        '"unsubscribe", or "stop" to remove this subscription. Reply with "edit" and the new subscription ' + \
+        ' criteria to edit this subscription.' + \
         compose_salutation()
     return result
 

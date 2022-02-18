@@ -1,11 +1,15 @@
 import os
+from utils.dict_compare import dict_compare
+from utils.logger import Logger
 
 EMPTY = ''
 
 
 def create_file(full_path):
+    full_path = os.path.abspath(full_path)
     directory = os.path.dirname(full_path)
     if not os.path.exists(directory):
+        Logger.log('Creating directory ' + directory)
         os.makedirs(directory)
     with open(full_path, 'w+') as f:
         f.close()

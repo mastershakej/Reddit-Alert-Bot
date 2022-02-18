@@ -22,9 +22,12 @@ class SubscriptionLexer:
     title_keywords = ['-title', '-item', '-items']
     body_keywords = ['-body', '-site', '-sites', '-url', '-content', '-selftext', '-link']
     redditors_keywords = ['-redditor', '-redditors', '-user', '-users']
-    ignore_title_keywords = ['-ignore-title', '-ignore-item', '-ignore-items']
-    ignore_body_keywords = ['-ignore-body', '-ignore-site', '-ignore-sites', '-ignore-url', '-ignore-content', '-ignore-selftext', '-ignore-link']
-    ignore_redditors_keywords = ['-ignore-redditor', '-ignore-redditors', '-ignore-user', '-ignore-users']
+    ignore_title_keywords = ['-ignore-title', '-ignore-item', '-ignore-items', \
+        '-ignoretitle', '-ignoreitem', '-ignoreitems']
+    ignore_body_keywords = ['-ignore-body', '-ignore-site', '-ignore-sites', '-ignore-url', '-ignore-content', '-ignore-selftext', '-ignore-link', \
+        '-ignorebody', '-ignoresite', '-ignoresites', '-ignoreurl', '-ignorecontent', '-ignoreselftext', '-ignorelink']
+    ignore_redditors_keywords = ['-ignore-redditor', '-ignore-redditors', '-ignore-user', '-ignore-users', \
+        '-ignoreredditor', '-ignoreredditors', '-ignoreuser', '-ignoreusers']
     subreddit_keywords = ['-subreddit', '-subreddits', '-sub', '-subs', '-reddit', '-red']
     nsfw_keywords = ['-nsfw', '-show-nsfw']
     email_keywords = ['-email']
