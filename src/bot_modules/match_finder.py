@@ -111,7 +111,7 @@ class MatchFinder:
                 Logger.log(Logger.aligntext(subreddit.lower(), 50) + '(' + str(index) + '/' + str(len(subscriptions)) + ')')
                 for attr, value in subscription.data.items():
                     if(value) and attr not in ["subreddits", "schema_version", "valid"]:
-                        Logger.log('    ' + attr.capitalize() + ': ' + str(value))
+                        Logger.log('  ' + attr.capitalize() + ': ' + str(value))
                 if subreddit.lower() not in [k.lower() for k in subreddits.keys()]:
                     submissions = reddit.get_submissions(subreddit.lower(), index, len(subscriptions))
                     subreddits[subreddit.lower()] = submissions
