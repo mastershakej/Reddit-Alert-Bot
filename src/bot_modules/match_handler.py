@@ -11,8 +11,6 @@ class MatchHandler:
         index = 0
         for subscription, submission in matches:
             index += 1
-            Logger.log(Logger.aligntext('Processing match ', 30) + '(' + str(index) + '/' + str(len(matches)) + ')')
-            #Logger.log('Processing match ' + str(index) + '/' + str(len(matches)))
             try:
                 subs = database.get_subscriptions_by_user(subscription.username)
                 message = reddit.get_message(subscription.message_id)

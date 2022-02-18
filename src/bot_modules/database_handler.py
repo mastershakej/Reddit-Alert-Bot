@@ -102,7 +102,7 @@ class DatabaseHandler:
                 message_id = sub[database.COL_SUB_MESSAGE_ID]
                 try:
                     subscription = Subscription(item, username, message_id)
-                    print('BY MESSAGE ID: ' + subscription.message_id)
+                    print('Message ID: ' + subscription.message_id)
                     subs.append(subscription)
                 except:
                     raise DatabaseHandlerException('ERROR - get_subscriptions_by_message_id - subscription not valid')

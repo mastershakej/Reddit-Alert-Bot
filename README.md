@@ -2,8 +2,8 @@
 
 This bot allows users to subscribe to certain posts based on the title, body, link, post author, etc. The bot will notify the user when it finds posts that matches what the user specifies.
 This bot is excellent to keep track of subreddits that post links to sales or freebies!
-[Formerly known as /u/sales__bot for /r/buildapcsales.](https://www.reddit.com/r/buildapcsales/comments/3u2tg5/buildapcsales_bot/)
 
+Credit for the original [Alert Bot](https://github.com/tylerbrockett/Alert-Bot-Reddit) goes to [/u/tylerbrockett](https://www.reddit.com/user/tylerbrockett)
 
 # How It Works
 
@@ -178,6 +178,11 @@ By default, the bot will ignore posts that are marked as NSFW. Some subreddits u
 * -nsfw
 * -show-nsfw
         
+## To Edit
+There are 2 ways to edit existing subscriptions. All of these require sending the message as the **body** of the message. The subject doesn't matter.
+* **Edit by reply -** Reply to an alert with ***'edit'*** and the new subscription criteria in order to edit that subscription. 
+* **Edit by subscription number -** Send the bot a message with ***'edit #'*** (where the '#' symbol is the actual subscription number) and the new subscription criteria in order to edit that subscription. This requires knowing the order you subscribed in, or by sending the bot a message with "subs" or "subscriptions" to find out.
+
 ## To Unsubscribe
 There are 3 ways to unsubscribe from posts. All of these require sending the message as the **body** of the message. The subject doesn't matter.
 * **Unsubscribe All -** Send the bot the message ***'unsubscribe all'*** in order to stop being notified of any posts.
@@ -197,7 +202,6 @@ To get detailed information on how the bot works, send the bot a message with th
 If you send a message that doesn't follow the above guidelines, you will get an error message from the bot saying the request wasn't recognized.
 
 ## Future Plans
-* Ability to edit subscription (add/remove parameters)
 * Ability to send out email notifications if the user specifies it
 
 ## Issues / things to watch out for

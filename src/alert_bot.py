@@ -33,8 +33,8 @@ class AlertBot:
         system(command)
   
     def start(self):
-        Logger.log('Using database file ' + path.abspath(env.DATABASE))
         Logger.log('Starting bot as /u/' + env.BOT_USERNAME + '...')
+        Logger.log('Using database file ' + path.abspath(env.DATABASE))
         while True:
             try:
                 self.check_for_commands()
@@ -52,7 +52,7 @@ class AlertBot:
                 else:
                     Logger.log('--------- Bot paused by developer ---------')
 
-                SleepHandler.sleep(900)
+                SleepHandler.sleep(300)
                 AlertBot.clear()
             except KeyboardInterrupt:
                 Logger.log('Keyboard Interrupt - Bot killed')
