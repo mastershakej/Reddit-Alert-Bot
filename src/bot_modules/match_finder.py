@@ -106,12 +106,12 @@ class MatchFinder:
         index = 0
         for subscription in subscriptions:
             index += 1
+            Logger.log(Logger.aligntext('    ' + subscription.username + ':', 66) + '(' + str(index) + '/' + str(len(subscriptions)) + ')')
+            for attr, value in subscription.data.items():
+                if(value) and attr not in ["schema_version", "valid"]:
+                    Logger.log('        ' + attr.capitalize() + ': ' + str(value))
             subreds = subscription.data[Subscription.SUBREDDITS]
             for subreddit in subreds:
-                Logger.log(Logger.aligntext(subreddit.lower(), 50) + '(' + str(index) + '/' + str(len(subscriptions)) + ')')
-                for attr, value in subscription.data.items():
-                    if(value) and attr not in ["subreddits", "schema_version", "valid"]:
-                        Logger.log('  ' + attr.capitalize() + ': ' + str(value))
                 if subreddit.lower() not in [k.lower() for k in subreddits.keys()]:
                     submissions = reddit.get_submissions(subreddit.lower(), index, len(subscriptions))
                     subreddits[subreddit.lower()] = submissions

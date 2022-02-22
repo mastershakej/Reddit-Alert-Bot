@@ -25,7 +25,6 @@ class MatchHandler:
                     handle_crash(traceback.format_exc(), message_dev=False, reddit=reddit, database=database)
 
 class MatchHandlerException(Exception):
-
     def __init__(self, error_args):
         Exception.__init__(self, 'MatchHandlerException: {0}'.format(error_args))
         self.errorArgs = error_args

@@ -86,7 +86,6 @@ def compose_unsubscribe_message(username, removed_subs, subs):
         'You have unsubscribed from the following item. Thanks for using the bot!\n\n' + \
         removed_subs[0].to_table('Unsubscribed From') + \
         '\n' + \
-        format_subscription_list(subs, 'Your Subscriptions') + \
         compose_salutation()
     return result
 
@@ -100,7 +99,6 @@ def compose_unsubscribe_by_num_message(username, removed_sub, subs):
     result = compose_greeting(username) + \
         'You have successfully unsubscribed from the following item.\t \n\t \n' + \
         removed_sub.to_table('Unsubscribed From') + '\t \n\t \n' + \
-        format_subscription_list(subs, 'Your Subscriptions') + \
         compose_salutation()
     return result
 
@@ -184,6 +182,9 @@ def format_submission_body_summary(submission):
 
 def compose_match_message(sub, submission, subs):
     result = compose_greeting(sub.username) + \
+        'We found a match for one of your subscriptions!\t \n' + \
+        '**Post Author:**\t \n' + \
+        '/u/' + str(submission.author.name) + '\t \n' + \
         '**Post Title:**\t \n' + \
         '[' + submission.title + '](' + submission.permalink + ')\t \n\t \n' + \
         format_submission_body_summary(submission) + '\t \n\t \n' + \

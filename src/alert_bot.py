@@ -42,9 +42,9 @@ class AlertBot:
                     self.start_time = times.get_current_timestamp()
                     InboxHandler.read_inbox(self.database, self.reddit)
                     subscriptions = self.database.get_subscriptions()
-                    Logger.log('Found ' + str( len(subscriptions)) + ' subscriptions')
+                    Logger.log('    Found ' + str( len(subscriptions)) + ' subscriptions')
                     matches = MatchFinder.find_matches(subscriptions, self.reddit, self.database)
-                    Logger.log('Found ' + str(len(matches)) + ' Matches')
+                    Logger.log('    Found ' + str(len(matches)) + ' Matches')
                     MatchHandler.send_messages(self.reddit, self.database, matches)
                     self.database.purge_old_matches()
                     Logger.log('Finished. Took ' + times.get_time_passed(self.start_time))
@@ -52,7 +52,7 @@ class AlertBot:
                 else:
                     Logger.log('--------- Bot paused by developer ---------')
 
-                SleepHandler.sleep(300)
+                SleepHandler.sleep(30)
                 AlertBot.clear()
             except KeyboardInterrupt:
                 Logger.log('Keyboard Interrupt - Bot killed')
