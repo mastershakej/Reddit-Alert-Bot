@@ -37,7 +37,6 @@ The ***-title*** parameter specifies words or phrases to watch out for in the ti
 - Watches for posts containing the phrase 'funny cats' ***AND*** 'dogs' in its title in the /r/funny subreddit, but order of the two phrases doesn't matter.
 
 **Aliases:**
-* -title
 * -item
 * -items
 
@@ -60,7 +59,6 @@ The ***-body*** parameter specifies words or phrases to watch out for in the bod
 - Watches for posts containing the phrase 'funny cats' ***AND*** 'dogs' in its selftext or link, but order of the two phrases doesn't matter.
 
 **Aliases:**
-* -body
 * -site
 * -sites
 * -url
@@ -82,7 +80,6 @@ The ***-redditor*** parameter is used to filter posts from a subreddit by a spec
 - Watches for posts containing 'cats' in the title, by the user /u/mastershakej ***OR*** /u/made-up-name, in the subreddit /r/videos
 
 **Aliases:**
-* -redditor
 * -redditors
 * -user
 * -users
@@ -100,7 +97,6 @@ The ***-ignore-title*** parameter is used when you want to ignore posts that con
 -Watches for posts containing 'cats' in the title, which do not contain 'cucumber' ***OR*** 'dog' in the title, in the subreddit /r/StartledCats. [Cucumber reference.](https://www.reddit.com/r/StartledCats/comments/3cl2gn/cat_vs_cucumber/?ref=search_posts)
 
 **Aliases:**
-* -ignore-title
 * -ignore-item
 * -ignore-items
 
@@ -117,7 +113,6 @@ The ***-ignore-title*** parameter is used when you want to ignore posts that con
 - Watches for posts containing 'cats' in the title, which do not contain 'cucumber' ***OR*** 'dog' in the selftext or link, in the subreddit /r/StartledCats. [Cucumber reference.](https://www.reddit.com/r/StartledCats/comments/3cl2gn/cat_vs_cucumber/?ref=search_posts)
 
 **Aliases:**
-* -ignore-body
 * -ignore-site
 * -ignore-sites
 * -ignore-url
@@ -139,7 +134,6 @@ The ***-ignore-redditor*** parameter is used to ignore posts from a subreddit by
 - Watches for posts containing 'cats' in the title, ***NOT*** by the user /u/mastershakej ***OR*** /u/made-up-name, in the subreddit /r/videos
 
 **Aliases:**
-* -ignore-redditor
 * -ignore-redditors
 * -ignore-user
 * -ignore-users
@@ -160,7 +154,6 @@ The ***-subreddit*** parameter specifies which subreddits to look in for posts m
 - Watches for posts containing 'cats' in the title in the subreddits /r/funny and /r/videos
 
 **Aliases:**
-* -subreddit
 * -subreddits
         
 ### Flags:
@@ -175,7 +168,6 @@ By default, the bot will ignore posts that are marked as NSFW. Some subreddits u
 - Searches for posts containing 'CPU' and 'Intel i7' in the title of the posts, ***including*** the expired sales.
 
 **Aliases:**
-* -nsfw
 * -show-nsfw
         
 ## To Edit
