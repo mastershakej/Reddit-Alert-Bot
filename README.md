@@ -102,7 +102,7 @@ The ***-ignore-title*** parameter is used when you want to ignore posts that con
 
 ### -ignore-body *\<parameter list\>*
 
-The ***-ignore-title*** parameter is used when you want to ignore posts that contain the specified words or phrases. A list of words or phrases can be specified, separated by a comma. If only ***one*** word or phrase in that list matches, the post is ignored.
+The ***-ignore-body*** parameter is used when you want to ignore posts that contain the specified words or phrases. A list of words or phrases can be specified, separated by a comma. If only ***one*** word or phrase in that list matches, the post is ignored.
 
 **Examples:**
 
